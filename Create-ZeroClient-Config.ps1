@@ -30,7 +30,7 @@ function Main {
   
   Write-Host "Configuration file created successfully" -ForegroundColor "Green"
   Write-Host ""
-  Write-Host "Press any key to continue..."
+  Write-Host "Press any key to continue..." -ForegroundColor "Green"
   $Pause = $host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
 }
 

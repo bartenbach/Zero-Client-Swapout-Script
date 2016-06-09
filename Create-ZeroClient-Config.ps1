@@ -24,9 +24,8 @@ function Main {
   
   New-Item -Path $file -Type File -Force >> $null
   
-  "DefaultUser=" + $username   >> $file
-  "Password=letmein"           >> $file
-  "TerminalName=Z" + $username >> $file
+  $text = "DefaultUser=$username`nPassword=letmein`nTerminalName=Z$username"
+  [System.IO.File]::WriteAllText($file, $text)
   
   Write-Host "Configuration file created successfully" -ForegroundColor "Green"
   Write-Host ""
